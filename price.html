@@ -1,220 +1,191 @@
----
-title: 首頁
-layout: ./app/assets/components/layout/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>定價</title>
+  <!-- Search Engine -->
+<meta name="description" content="頁面說明">
+<meta name="image" content="網站圖片">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="頁面 Title">
+<meta itemprop="description" content="頁面說明">
+<meta itemprop="image" content="網站圖片">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="頁面 Title">
+<meta name="twitter:description" content="頁面說明">
+<meta name="twitter:image:src" content="預覽圖片">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta property="og:title" content="頁面 Title">
+<meta property="og:description" content="頁面說明">
+<meta property="og:image" content="預覽圖片">
+<meta property="og:url" content="#">
+<meta property="og:site_name" content="頁面 Title">
+<meta property="fb:admins" content="FB-ID">
+<meta property="og:type" content="website">
+<!-- 網頁 favicon.ico -->
+<link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon"> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/swiper-bundle.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
 
+<body class="">
+  <header class="z-20 w-full">
+    <nav class="fixed container relative flex justify-between items-center text-white py-7 border-b">
+      <a href="/">
+        <img class="w-[147px] md:w-[245px]"
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
+          alt="AI 工具王">
+      </a>
+      <button type="button" id="btn-menu">
+        <span class="material-icons block md:hidden">menu</span>
+      </button>
+      <ul class="hidden md:flex md:items-center md:gap-5">
+        <li><a href="/index.html">首頁</a></li>
+        <li><a href="/price.html">定價</a></li>
+      </ul>
+      <div id="menu-list" class="hidden absolute top-full left-0 w-full min-h-full md:hidden bg-black">
+        <ul class="font-black text-display03 flex flex-col justify-center items-center menu-h">
+          <li>
+            <a class="flex items-center py-1" href="/index.html">首頁</a>
+          </li>
+          <li>
+            <a class="flex items-center py-1" href="/price.html">定價</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--  -->
+<div class="container pt-10" hidden ">
+  <p class="text-h1 sm:text-display02 font-black w-3/4 sm:w-full mb-10">透過<br>AI工具王的<br>強大模型<br>讓您的業務更聰明</p>
+  <button type="button" class="h6 py-5 px-10 border border-white rounded-2xl mb-45 sm:mb-25">開始使用</button>
+  <div class="flex justify-end overflow-y-hidden">
+    <img id="ani-box1" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+      class="h-[117px] sm:h-[180px] ani-box1" alt="icon">
+    <img id="ani-box2" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+      class="h-[117px] sm:h-[180px] ani-box2" alt="icon">
+    <img id="ani-box3" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+      class="h-[117px] sm:h-[180px] ani-box3" alt="icon">
+  </div>
+</div>
+    <div class="container pt-10" true ">
+  <p class="text-h1 sm:text-display02 font-black w-3/4 sm:w-full mb-10 sm:mb-20 opacity-1">用多少，<br> 付多少。</p>
+  <div class="flex">
+    <p class="w-3/4 ml-auto text-h4 sm:text-h1 font-black mb-[258px] sm:mb-[238px]">我們相信，最靈活的取用機<br
+        class="sm:hidden">制，才能最大化的幫助你業務的推動。</p>
+  </div>
+  <div class="flex overflow-y-hidden">
+    <img id="ani-box1" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+      class="h-[117px] sm:h-[180px] ani-box1" alt="icon">
+    <img id="ani-box2" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+      class="h-[117px] sm:h-[180px] ani-box2" alt="icon">
+    <img id="ani-box3" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/deco.png?raw=true"
+      class="h-[117px] sm:h-[180px] ani-box3" alt="icon">
+  </div>
+</div>
+  </header>
+  
+  
 <section class="mt-30 sm:mt-40 container">
-  <div class="grid md:grid-cols-3">
-    <p class="col-span-1 text-h6 sm:text-h3 font-black mb-6">我們的服務</p>
-    <p class="col-span-2 text-h3 sm:text-h1 font-black">我們相信透過 AI 技術，包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。</p>
-  </div>
-  <div class="mt-12 sm:mt-20">
-    <div class="grid md:grid-cols-3 gap-y-3 gap-x-6">
-      <a href="" class="flex flex-col ring-1 ring-black-80 px-5 py-10 rounded-2xl group duration">
-        <div class="mb-5">
-          <img class="sm:group-hover:scale-125 duration-300"
-            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/flash on.png?raw=true"
-            alt="flash on">
+  <div class="">
+    <p class="text-h6 sm:text-h3 font-black mb-6 sm:mb-20">定價</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 sm:gap-6 group">
+      <li
+        class="border border-black-80 py-5 group-hover:cursor-pointer hover:border-white rounded-2xl flex flex-col justify-between h-[240px] sm:h-[318px] divide-y divide-black-80 duration-300">
+        <div class="px-5">
+          <h3 class="text-h3 font-black mb-3">琪琪</h3>
+          <ul class="list-disc pl-5 pb-[58px]">
+            <li>初級 </li>
+            <li>速度最快</li>
+          </ul>
         </div>
-        <p class="mb-5 font-black text-h3">快速</p>
-        <p class="text-base">我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</p>
-      </a>
-
-      <a href="" class="flex flex-col ring-1 ring-black-80 px-5 py-10 rounded-2xl group duration">
-        <div class="mb-5">
-          <img class="sm:group-hover:scale-125 duration-300"
-            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/auto awesome.png?raw=true"
-            alt="flash on">
+        <div class="px-5 pt-5 flex justify-between">
+          <p>NT$5<span class="text-black-60">／1k tokens</span></p>
+          <a href="" class="flex items-center">開始使用 <span class="material-icons block text-star ml-3">
+              call_made
+            </span></a>
         </div>
-        <p class="mb-5 font-black text-h3">靈活</p>
-        <p class="text-base">我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。</p>
-      </a>
-
-      <a href="" class="flex flex-col ring-1 ring-black-80 px-5 py-10 rounded-2xl group duration">
-        <div class="mb-5">
-          <img class="sm:group-hover:scale-125 duration-300"
-            src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/library add.png?raw=true"
-            alt="flash on">
+      </li>
+      <li
+        class="border border-black-80 py-5 group-hover:cursor-pointer hover:border-white rounded-2xl flex flex-col justify-between h-[240px] sm:h-[318px] divide-y divide-black-80 duration-300">
+        <div class="px-5">
+          <h3 class="text-h3 font-black mb-3">昊昊</h3>
+          <ul class="list-disc pl-5 pb-[58px]">
+            <li>中級</li>
+          </ul>
         </div>
-        <p class="mb-5 font-black text-h3">擴充</p>
-        <p class="text-base">我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</p>
-      </a>
-    </div>
-  </div>
-</section>
+        <div class="px-5 pt-5 flex justify-between">
+          <p>NT$5<span class="text-black-60">／1k tokens</span></p>
+          <a href="" class="flex items-center">開始使用 <span class="material-icons block text-star ml-3">
+              call_made
+            </span></a>
+        </div>
+      </li>
+      <li
+        class="border border-black-80 py-5 group-hover:cursor-pointer hover:border-white rounded-2xl flex flex-col justify-between h-[240px] sm:h-[318px] divide-y divide-black-80 duration-300">
+        <div class="px-5">
+          <h3 class="text-h3 font-black mb-3">卡卡</h3>
+          <ul class="list-disc pl-5">
+            <li>高級</li>
+          </ul>
+        </div>
+        <div class="px-5 pt-5 flex items-center justify-between">
+          <p class="flex flex-grow-0">NT$5<span class="text-black-60">／1k tokens</span></p>
+          <a href="" class="flex flex-grow-0 items-center">開始使用 <span class="material-icons block text-star ml-3">
+              call_made
+            </span>
 
-<section class="mt-30 sm:mt-40 container">
-  <div>
-    <p class="text-h6 sm:text-h3 font-black">來自合作夥伴</p>
-  </div>
-  <div class="mt-6 sm:mt-20">
-    <ul
-      class="relative flex justify-center overflow-x-auto gay-x-5 scrollbar-hidden after:sticky before:sticky sm:before:pr-[196px] sm:after:pl-[196px]">
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
-          alt="">
+          </a>
+        </div>
       </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
-          alt="">
+      <li
+        class="border border-black-80 py-5 group-hover:cursor-pointer hover:border-white rounded-2xl flex flex-col justify-between h-[240px] sm:h-[318px] divide-y divide-black-80 duration-300">
+        <div class="px-5">
+          <h3 class="text-h3 font-black mb-3">杰杰</h3>
+          <ul class="list-disc pl-5 pb-[58px]">
+            <li>最高級</li>
+            <li>資訊最完善</li>
+          </ul>
+        </div>
+        <div class="px-5 pt-5 flex justify-between">
+          <p>NT$5<span class="text-black-60">／1k tokens</span></p>
+          <a href="" class="flex items-center">開始使用 <span class="material-icons block text-star ml-3">
+              call_made
+            </span></a>
+        </div>
       </li>
     </ul>
-    <ul class="relative flex justify-center overflow-x-auto gay-x-5 mt-3 scrollbar-hidden">
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise9.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise11.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise12.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
-          alt="">
-      </li>
-      <li>
-        <img class="w-[160px] h-[40px] max-w-max"
-          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=trueg"
-          alt="">
-      </li>
-    </ul>
   </div>
-  <div class="py-8 sm:py-40">
-    <!-- Slider main container -->
-    <div class="swiper person-wriper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper h-[289px] sm:h-[400px] mb-5">
-        <!-- Slides -->
-        <div class="swiper-slide h-full">
-          <!-- 這邊是放要輪播的內容 -->
-          <div class="bg-white/8 p-5 sm:p-10 flex flex-col h-full rounded-xl">
-            <div class="flex gap-x-1 mb-5">
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-            </div>
-            <p class="text-base ">非常喜歡 AI工具王 提供的 AI
-              模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王 提供的 AI 模型能夠幫助我們節省大量時間和成本，實在是太棒了！</p>
-            <div class="mt-auto flex">
-              <img class="mr-4"
-                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar3.png?raw=true"
-                alt="">
-              <div>
-                <p class="text-base font-bold">陳小姐</p>
-                <p class="text-sm sm:mt-1">ABC科技有限公司</p>
-              </div>
-            </div>
-          </div>
+  <div class="mt-30 sm:mt-40">
+    <div class="grid sm:grid-cols-3">
+      <p class="text-h6 sm:text-h3 font-black mb-12 sm:mb-0">使用規範</p>
+      <div class="col-span-2">
+        <div class="pb-10 [&:not(:first-of-type)]:pt-8 [&:not(:first-of-type)]:sm:pt-10 border-black-80 border-b">
+          <h3 class="text-h3 sm:text-h1 font-black mb-8">守法</h3>
+          <p class="text-base sm:text-h3">請遵守相關的法規和政策，不得進行任何違法違規的活動。</p>
         </div>
-        <div class="swiper-slide h-full">
-          <!-- 這邊是放要輪播的內容 -->
-          <div class="bg-white/8 p-5 sm:p-10 flex flex-col h-full rounded-xl">
-            <div class="flex gap-x-1 mb-5">
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-            </div>
-            <p class="text-base ">作為一家醫療器材公司，我們非常關注人工智能技術的應用，而 AI工具王 提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用 AI工具王
-              的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝 AI工具王 團隊的辛勤工作！</p>
-            <div class="mt-auto flex">
-              <img class="mr-4"
-                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar1.png?raw=true"
-                alt="">
-              <div>
-                <p class="text-base font-bold">劉小姐</p>
-                <p class="text-sm sm:mt-1">XYZ 醫療器材有限公司</p>
-              </div>
-            </div>
-          </div>
+        <div class="pb-10 [&:not(:first-of-type)]:pt-8 [&:not(:first-of-type)]:sm:pt-10 border-black-80 border-b">
+          <h3 class="text-h3 sm:text-h1 font-black mb-8">資訊安全</h3>
+          <p class="text-base sm:text-h3">請務必保護好自己的帳號和密碼，不得將其透露給他人。</p>
         </div>
-        <div class="swiper-slide h-full">
-          <!-- 這邊是放要輪播的內容 -->
-          <div class="bg-white/8 p-5 sm:p-10 flex flex-col h-full rounded-xl">
-            <div class="flex gap-x-1 mb-5">
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-              <span class="material-icons text-star block"> star </span>
-            </div>
-            <p class="text-base ">我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而 AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們使用 AI工具王
-              的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝 AI工具王 團隊的支持！</p>
-            <div class="mt-auto flex">
-              <img class="mr-4"
-                src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar2.png?raw=true"
-                alt="">
-              <div>
-                <p class="text-base font-bold">黃先生</p>
-                <p class="text-sm sm:mt-1">EFG 銀行</p>
-              </div>
-            </div>
-          </div>
+        <div class="pb-10 [&:not(:first-of-type)]:pt-8 [&:not(:first-of-type)]:sm:pt-10 border-black-80 border-b">
+          <h3 class="text-h3 sm:text-h1 font-black mb-8">守密</h3>
+          <p class="text-base sm:text-h3">需對使用過程中產生的數據負責，不得擅自泄露數據。</p>
         </div>
       </div>
-      <div class="swiper-pagination static flex items-center justify-center"></div>
     </div>
   </div>
 </section>
 
 <!-- 白色區塊 -->
-<section class="bg-white rounded-bg20 py-20 md:py-40">
+<section class="bg-white rounded-bg20 py-20 md:py-40 sm:mt-40 mt-30">
   <div class="container ">
     <h3 class="font-black text-h3 md:text-display03 text-black mb-8 md:mb-20 text-center">這些超酷的應用， 都來自 AI工具王</h3>
     <label for="searchInput" class="mb-4 flex items-center rounded-2xl bg-[#f2f2f2] px-10 py-5 mb-4 sm:mb-6">
@@ -480,14 +451,61 @@ current: index
   </div>
 </section>
 
-<section class="py-40 container border-b border-white">
-  <div class="flex flex-col items-center">
-    <h2 class="text-h1 font-black mb-8 md:mb-10 text-center">現在就來建立<br class="md:hidden">屬於你的服務吧</h2>
-    <button type="button" class="h6 py-5 pl-10 pr-8 border border-white rounded-2xl flex items-center font-black">開始使用
-      <span class="material-icons block pl-3"> call_made </span>
-    </button>
+<section class="hidden py-30 sm:py-40 container border-b border-white">
+  <div class="grid grid-cols-1 sm:grid-cols-3">
+    <p class="col-span-1 text-h6 sm:text-h3 font-black mb-6 sm:0">常見問題</p>
+    <ul id="qaList" class="col-span-2">
+      <li class="mb-4 border border-black-80 rounded-xl">
+        <button class="flex  p-5 text-h6 font-black" type="button">
+          <span class="material-icons block mr-5"> add </span> 如何選擇適合的AI模型？
+        </button>
+        <div class="overflow-hidden h-0">
+          <p class="ml-[44px] p-5 pt-0">選擇適合的 AI
+            模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價與反饋，來選擇最適合的模型。
+          </p>
+        </div>
+      </li>
+      <li class="mb-4 border border-black-80 rounded-xl">
+        <button class="flex items-center p-5 text-h6 font-black" type="button">
+          <span class="material-icons block mr-5"> add </span> 租用模型的費用是如何計算的？
+        </button>
+        <div class="overflow-hidden h-0">
+          <p class="ml-[44px] p-5 pt-0">
+            租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、暫用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動算出對應的租用費用。
+          </p>
+        </div>
+      </li>
+      <li class="mb-4 border border-black-80 rounded-xl">
+        <button class="flex items-center p-5 text-h6 font-black" type="button">
+          <span class="material-icons block mr-5"> add </span> 如何進行付款？
+        </button>
+        <div class="overflow-hidden h-0">
+          <p class="ml-[44px] p-5 pt-0">
+            付款方式可以通過網站上提供的宴上支付平台進行支付。具體而言，您可以選擇信用卡、銀行轉帳電子錢包等不同的支付方式進行支付。在支付前，您需要先登錄網站並選擇適合的租用方案，系統會自動計算出對應的租用欸用和支付金額，然後您可以選擇適合的支付方式進行支付。完成支付後，系統會自動向您提供相應的服務。
+          </p>
+        </div>
+      </li>
+      <li class="mb-4 border border-black-80 rounded-xl">
+        <button class="flex items-center p-5 text-h6 font-black" type="button">
+          <span class="material-icons block mr-5"> add </span> 租用模型的期限是多久？
+        </button>
+        <div class="overflow-hidden h-0">
+          <p class="ml-[44px] p-5 pt-0">租用模型的期限可以根據您的需求進行設置，通常可以選擇幾個小時、幾天或幾個月等不同的時間段。
+        </div>
+      </li>
+      <li class="mb-4 border border-black-80 rounded-xl">
+        <button class="flex items-center p-5 text-h6 font-black" type="button">
+          <span class="material-icons block mr-5"> add </span> 如果在使用過程中遇到問題，應該怎麼處理？
+        </button>
+        <div class="overflow-hidden h-0">
+          <p class="ml-[44px] p-5 pt-0">如果在使用過程中遇到問題，您可以聯繫惡扶或技術支持人員進行諮詢或報告問題。您也可以。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答。
+          </p>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
+
 <section class="py-20 container border-b border-white">
   <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between">
     <div class="font-black order-1 sm:order-none flex flex-col items-start">
@@ -501,3 +519,26 @@ current: index
     </div>
   </div>
 </section>
+
+  <footer class="py-8">
+    <div class="container font-bold text-base flex justify-between sm:justify-start items-center flex-wrap">
+      <p class="mb-8 sm:mb-0 sm:mr-25">AI工具王 © 2023</p>
+      <a class="mb-8 sm:mb-0 flex items-center sm:order-1 sm:ml-auto" id="back-to-top" href="/">
+        Back to top
+        <span class="material-icons black ml-3">arrow_upward</span>
+      </a>
+      <div class="w-full sm:w-auto flex items-center gap-x-5">
+        <a href="">Facebook</a>
+        <a href="">Twitter</a>
+        <a href="">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
+
+
